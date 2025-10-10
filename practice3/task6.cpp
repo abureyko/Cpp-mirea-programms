@@ -14,7 +14,7 @@ int main(){
     }
     
     cout << "Введите 10 чисел:" << endl;
-    int num;
+    double num;
     for (int i = 0; i < 10; i++){
         cin >> num;
         outFile << num << endl;
@@ -27,13 +27,13 @@ int main(){
         return 1;
     }
     
-    int sum = 0;  
+    double sum = 0;  
     string line;
     
     cout << "Сумма этих чисел: ";
     while (getline(inFile, line)) {  
         if (!line.empty()) { 
-            sum += stoi(line);  
+            sum += stof(line);  
         }
     }
     

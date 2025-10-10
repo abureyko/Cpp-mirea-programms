@@ -38,12 +38,18 @@ int main() {
         }
         cout << endl;
     }
-    
-    cout << "\nВопрос 1: 28.1 24.5" << endl;
-    cout << "Вопрос 2: 11 8.2" << endl;
-    cout << "Вопрос 3: 77.4" << endl;
-    cout << "Вопрос 4: 29" << endl;
-    cout << "Вопрос 5: 106.4" << endl;
+    double sum;
+
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 2; j++)
+        sum += C[i][j];
+    }
+
+    cout << "\nВопрос 1: " << C[0][0] << " " << C[1][0] << endl;
+    cout << "Вопрос 2: "<< C[1][1] << endl;
+    cout << "Вопрос 3: "<< C[0][0]+C[1][0]+C[2][0] << endl;
+    cout << "Вопрос 4: " << C[0][1]+C[1][1]+C[2][1]<< endl;
+    cout << "Вопрос 5: " << sum << endl;
 
     return 0;
 }

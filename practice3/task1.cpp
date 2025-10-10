@@ -15,7 +15,7 @@ int main() {
     }
     
     outFile << "Это пример текстового файла." << endl;
-    outFile << "Для task2: asdkfjh2349hsdk342kjhdf" << endl;
+    outFile << "Для task2: Аня лучше всех!!!" << endl;
     
     outFile.close(); 
     cout << "Файл '" << filename << "' успешно создан на диске." << endl << endl;

@@ -7,7 +7,6 @@ using namespace std;
 
 string countingSortString(string str) {
     int n = str.length();
-    if (n == 0) return str;
     
     // Для ASCII символов (0-127)
     const int RANGE = 128;

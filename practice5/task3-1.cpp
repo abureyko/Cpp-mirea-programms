@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include <cctype> // для isalnum()
+#include <cctype>
 using namespace std;
 
 string findShortestWord(string &text){

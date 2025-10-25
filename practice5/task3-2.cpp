@@ -1,43 +1,39 @@
-// Вычисление частоты повтора символа в текстовом файле
+// (14) Добавление текста в конец текстового файла
+// УЖЕ СДАЛ
 
 #include <iostream>
 #include <fstream>
-#include <cctype>
+#include <string>
 
 using namespace std;
 
-void findSpecificCharFrequency(const string& filename, char targetChar) {
-    ifstream file(filename);
+void appendToFile(const string& filename, const string& text) {
+    ofstream file;
+    
+    // Открываем файл в режиме добавления (app - append)
+    file.open(filename, ios::app);
     
     if (!file.is_open()) {
         cout << "Ошибка открытия файла: " << filename << endl;
         return;
     }
     
-    char ch;
-    int charCount = 0;
-    
-    while (file.get(ch)) {
-        if (ch == targetChar) {
-            charCount++;
-        }
-    }
-    
+    file << text;
     file.close();
-
-    cout << "Количество вхождений: " << charCount << endl;
-
+    
+    cout << "Текст успешно добавлен в файл: " << filename << endl;
 }
 
 int main() {
-    string filename;
-    cout << "Введите имя файла: ";
-    cin >> filename;
-    char targetChar;
-    cout << "Введите символ для поиска: ";
-    cin >> targetChar;
+    string filename, text;
+    
+    filename = "example.txt";
+    
+    cout << "Введите текст для добавления: ";
+    getline(cin, text);
+    //text = "Здравствуйте, дорогие друзья, меня зовут Сафронов Александр Аркадьевич, я просто по определению доцент кафедры физики МИРЭА, и сегодня я прочитаю вам курс лекций по физике";
 
-    findSpecificCharFrequency(filename, targetChar);
+    appendToFile(filename, text);
     
     return 0;
 }
